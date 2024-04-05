@@ -5,8 +5,17 @@ const panoramaImage2 = new PANOLENS.ImagePanorama("images/image1.jpeg");
 
 const imageContainer = document.querySelector(".image-container");
 
-const btn = document.querySelector("#btn").addEventListener("click", yesRoom);
-const btn2 = document.querySelector("#btn2").addEventListener("click", noRoom);
+const btns = document.querySelectorAll(".btn, .btn2");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    if (btn.classList.contains("btn")) {
+      yesRoom();
+    } else if (btn.classList.contains("btn2")) {
+      noRoom();
+    }
+  });
+});
 
 const viewer = new PANOLENS.Viewer({
   container: imageContainer,

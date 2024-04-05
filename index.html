@@ -6,26 +6,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Include Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <div class="main-container">
-    <h1>Ye mewra room hai</h1>
-    <!-- <h4>Aur yahan pawry nahi hori hai</h4> -->
-    <div class="btncntr">
-      <button id="btn">Turn On the lights</button>
-      <button id="btn2">Turn Off the lights</button>
+<body class="bg-gray-900">
+
+  <div class=" flex-col flex justify-center items-center h-screen">
+
+    <div class="justify-around w-full items-center py-4 mb-2 hidden md:flex">
+      <button
+        class="btn2 px-8 py-3 bg-red-600 text-white font-semibold uppercase text-lg tracking-wide rounded hover:bg-red-900 transition-all hover:scale-90 duration-300">
+        Turn Off the lights
+      </button>
+
+      <h1 class="text-white text-4xl font-semibold uppercase tracking-wide ">Ye mewra room hai</h1>
+
+
+      <button
+        class="btn px-8 py-3 bg-green-600 text-white font-semibold uppercase text-lg tracking-wide rounded hover:bg-green-900 hover:scale-90 transition-all duration-300">Turn
+        On the lights</button>
+    </div>
+    <div class="justify-around w-full items-center py-4 mb-2 md:hidden flex flex-col">
+
+      <div>
+        <h1 class="text-white text-3xl px-4 font-semibold uppercase tracking-wide ">Ye mewra room hai</h1>
+
+      </div>
+      <div class="flex w-full justify-around my-4">
+        <button
+          class=" btn2 px-8 py-3 bg-red-600 text-white font-semibold uppercase text-lg tracking-wide rounded hover:bg-red-900 transition-all hover:scale-90 duration-300">
+          Light Off
+        </button>
+        <button
+          class="btn px-8 py-3 bg-green-600 text-white font-semibold uppercase text-lg tracking-wide rounded hover:bg-green-900 hover:scale-90 transition-all duration-300">
+          Light On</button>
+      </div>
+
     </div>
 
-    <div class="image-container"></div>
+    <div class="w-full h-full overflow-hidden image-container"></div>
   </div>
 
+
+  <!-- JavaScript and Panolens libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"
     integrity="sha512-uWKImujbh9CwNa8Eey5s8vlHDB4o1HhrVszkympkm5ciYTnUEQv3t4QHU02CUqPtdKTg62FsHo12x63q6u0wmg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/panolens.min.js"></script>
-
+  <!-- Your custom JavaScript -->
   <script src="main.js"></script>
 </body>
 
